@@ -18,7 +18,7 @@ public class CarService {
 
     public CarService(CarRepository repository) {
         /**
-         * TODO: Add the Maps and Pricing Web Clients you create
+         * TODO: Add the Maps and Pricing Web Clients
          *   in `VehiclesApiApplication` as arguments and set them here.
          */
         this.repository = repository;
@@ -41,12 +41,12 @@ public class CarService {
         /**
          * TODO: Find the car by ID from the `repository` if it exists.
          *   If it does not exist, throw a CarNotFoundException
-         *   Remove the below code as part of your implementation.
+         *   Remove the below code as part of  implementation.
          */
         Car car = new Car();
 
         /**
-         * TODO: Use the Pricing Web client you create in `VehiclesApiApplication`
+         * TODO: Use the Pricing Web client in `VehiclesApiApplication`
          *   to get the price based on the `id` input'
          * TODO: Set the price of the car
          * Note: The car class file uses @transient, meaning you will need to call
@@ -55,8 +55,8 @@ public class CarService {
 
 
         /**
-         * TODO: Use the Maps Web client you create in `VehiclesApiApplication`
-         *   to get the address for the vehicle. You should access the location
+         * TODO: Use the Maps Web client  in `VehiclesApiApplication`
+         *   to get the address for the vehicle.  access the location
          *   from the car object and feed it to the Maps service.
          * TODO: Set the location of the vehicle, including the address information
          * Note: The Location class file also uses @transient for the address,
@@ -90,19 +90,8 @@ public class CarService {
      * @param id the ID number of the car to delete
      */
     public void delete(Long id) {
-        /**
-         * TODO: Find the car by ID from the `repository` if it exists.
-         *   If it does not exist, throw a CarNotFoundException
-         */
         repository.delete(
                 repository.findById(id).orElseThrow(CarNotFoundException::new)
         );
-
-
-        /**
-         * TODO: Delete the car from the repository.
-         */
-
-
     }
 }
